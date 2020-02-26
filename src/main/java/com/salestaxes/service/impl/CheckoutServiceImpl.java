@@ -30,8 +30,8 @@ public class CheckoutServiceImpl implements CheckoutService {
 		
 		for (Item item : basket) {
 			tax = getTax(item);
-			BigDecimal pricePlusTax = (tax.equals(BigDecimal.ZERO)) ? item.getPrice() : round(item.getPrice().add(tax));
-//			BigDecimal pricePlusTax = (tax.equals(BigDecimal.ZERO)) ? item.getPrice() : item.getPrice().add(tax);
+//			BigDecimal pricePlusTax = (tax.equals(BigDecimal.ZERO)) ? item.getPrice() : round(item.getPrice().add(tax));
+			BigDecimal pricePlusTax = (tax.equals(BigDecimal.ZERO)) ? item.getPrice() : item.getPrice().add(tax);
 			item.setPrice(pricePlusTax.multiply(BigDecimal.valueOf(item.getAmount())));
 			receipt.setSalesTaxes(receipt.getSalesTaxes().add(tax));
 			receipt.setTotal(receipt.getTotal().add(item.getPrice()));
