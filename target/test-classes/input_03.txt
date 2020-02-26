@@ -1,0 +1,25 @@
+2
+Imported Bottle of Perfume
+4
+1	
+27.99
+S
+Bottle of Perfume
+4
+1
+18.99
+S
+Packet of Headache Pill
+3
+1
+9.75
+N
+1
+2
+Imported Box of Chocolates
+2
+1
+11.25
+N
+3
+4
